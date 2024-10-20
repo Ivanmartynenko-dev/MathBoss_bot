@@ -8,14 +8,13 @@ import random
 # добавлять в список при помощи append
 
 def level_1():
-    a = random.randint(1, 100)
-    b = random.randint(1,100)
-    c=0
+    a = str(random.randint(1, 100))
+    b = str(random.randint(1,100))
     signs = ['+', '-']
     sign = signs[random.randint(0, 1)]
     if a >= b:
-        return[a, sign, b, eval(str(a)+sign+str(b))]
+        return[a, sign, b, eval(a+sign+b)]
     else:
-        return[b, sign, a, eval(str(b)+sign+str(a))]
+        return[b, sign, a, eval(b+sign+a)]
 
 print(level_1())
